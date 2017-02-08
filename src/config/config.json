@@ -1,0 +1,117 @@
+{
+    "express": {
+        "view cache": true,
+        "view engine": "dust",
+        "views": "path:./views",
+        "x-powered-by": false
+    },
+    "view engines": {
+        "dust": {
+            "module": "adaro",
+            "renderer": {
+                "method": "dust",
+                "arguments": [{
+                    "cache": true,
+                    "helpers": [
+                        "dustjs-helpers"
+                    ]
+                }]
+            }
+        }
+    },
+    "middleware": {
+        "shutdown": {
+            "priority": 0,
+            "module": {
+                "name": "kraken-js/middleware/shutdown",
+                "arguments": [{
+                    "timeout": 5000,
+                    "template": "error/500"
+                }]
+            }
+        },
+        "compress": {
+            "priority": 10,
+            "enabled": true, // response compression is disabled by default
+            "module": {
+                "name": "compression",
+                "arguments": [{
+                    // 512 byte minimum before compressing output
+                    "threshold": 512
+                }]
+            }
+        },
+        "cookieParser": {
+            "priority": 20,
+            "module": {
+                "name": "cookie-parser",
+                "arguments": [
+                    "your better secret value"
+                ]
+            }
+        },
+        "json": {
+            "priority": 30,
+            "module": {
+                "name": "body-parser",
+                "method": "json",
+                "arguments": [{
+                    "limit": "1mb"
+                }]
+            }
+        },
+        "urlencoded": {
+            "priority": 40,
+            "module": {
+                "name": "body-parser",
+                "method": "urlencoded",
+                "arguments": [{
+                    "extended": true
+                }]
+            }
+        },
+        "multipart": {
+            "priority": 40,
+            "module": {
+                "name": "kraken-js/middleware/multipart",
+                "arguments": [{
+                    "uploadDir": "./assets/files"
+                }]
+            }
+        },
+        "static": {
+            "priority": 50,
+            "module": {
+                "name": "serve-static",
+                "arguments": [
+                    "path:./assets", {
+                        "maxAge": 86400000,
+                        "cache": 86400000
+                    }
+                ]
+            }
+        },
+        "appsec": {
+            "enabled": true,
+            "priority": 60,
+            "module": {
+                "name": "lusca",
+                "arguments": [{
+                    "csrf": false,
+                    "xframe": "SAMEORIGIN",
+                    "p3p": false,
+                    "csp": false
+                }]
+            }
+        },
+        "router": {
+            "priority": 120,
+            "module": {
+                "name": "express-enrouten",
+                "arguments": [{
+                    "index": "path:./routes"
+                }]
+            }
+        }
+    }
+}

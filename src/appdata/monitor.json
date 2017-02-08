@@ -1,0 +1,635 @@
+{
+  "configs": [
+    {
+      "projectName": "position",
+      "services": [
+        {
+          "serviceName": "solr-slave1",
+          "domainName": "solr-slave",
+          "serviceInfo": {
+            "ips": [
+              "172.30.1.220:8080",
+              "172.30.1.221:8080",
+              "172.30.1.222:8080",
+              "172.30.1.223:8080",
+              "172.30.1.224:8080",
+              "172.30.1.225:8080",
+              "172.30.1.226:8080",
+              "172.30.1.227:8080",
+              "172.30.1.228:8080",
+              "172.30.1.229:8080"
+            ],
+            "url": "http://IP/solr/position/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-slave2",
+          "domainName": "solr-slave",
+          "serviceInfo": {
+            "ips": [
+              "172.30.195.60:8080",
+              "172.30.195.61:8080",
+              "172.30.195.62:8080",
+              "172.30.195.63:8080",
+              "172.30.195.64:8080"
+            ],
+            "url": "http://IP/solr/position/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-master",
+          "domainName": "solr-master",
+          "serviceInfo": {
+            "ips": [
+              "172.30.1.220:8983",
+              "172.30.1.221:8983",
+              "172.30.1.222:8983",
+              "172.30.1.223:8983",
+              "172.30.1.224:8983",
+              "172.30.1.225:8983",
+              "172.30.1.226:8983",
+              "172.30.1.227:8983",
+              "172.30.1.228:8983",
+              "172.30.1.229:8983"
+            ],
+            "url": "http://IP/solr/position/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-recommend",
+          "domainName": "position-recommend",
+          "serviceInfo": {
+            "ips": [
+              "172.30.15.140:8080",
+              "172.30.15.143:8080",
+              "172.30.15.144:8080",
+              "172.30.15.145:8080"
+            ],
+            "url": "http://IP/solr/position/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "api1",
+          "domainName": "jobs-sou.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.9.11:8089",
+              "172.30.9.12:8089",
+              "172.30.9.13:8089",
+              "172.30.9.14:8089"
+            ],
+            "url": "http://IP/restpositionservice.svc/rest/search?pageindex=1&pagesize=1",
+            "field": "TotalRowCount"
+          }
+        },
+        {
+          "serviceName": "psapi",
+          "domainName": "psapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.16.170:8080",
+              "172.30.16.171:8080",
+              "172.30.16.172:8080",
+              "172.30.16.173:8080",
+              "172.30.16.174:8080",
+              "172.30.16.175:8080",
+              "172.30.16.176:8080",
+              "172.30.16.177:8080",
+              "172.30.16.178:8080",
+              "172.30.16.179:8080"
+            ],
+            "url": "http://IP/position?start=0&rows=0&client=sou&ip=172.30.17.10&S_SOU_WORK_CITY=530",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "psapi2",
+          "domainName": "psapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.16.190:8080",
+              "172.30.16.191:8080",
+              "172.30.16.192:8080",
+              "172.30.16.193:8080",
+              "172.30.16.194:8080",
+              "172.30.16.195:8080",
+              "172.30.16.196:8080",
+              "172.30.16.197:8080",
+              "172.30.16.198:8080",
+              "172.30.16.199:8080"
+            ],
+            "url": "http://IP/position?start=0&rows=0&client=sou&ip=172.30.17.10&S_SOU_WORK_CITY=530",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "prapi",
+          "domainName": "prapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.18.110:8080",
+              "172.30.18.111:8080",
+              "172.30.18.112:8080",
+              "172.30.18.113:8080",
+              "172.30.18.114:8080"
+            ],
+            "url": "http://IP/position?start=0&rows=0&client=sou&ip=172.30.17.10&S_SOU_WORK_CITY=530",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "prapi2",
+          "domainName": "prapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.18.180:8080",
+              "172.30.18.181:8080",
+              "172.30.18.182:8080",
+              "172.30.18.183:8080",
+              "172.30.18.184:8080",
+              "172.30.18.185:8080",
+              "172.30.18.186:8080",
+              "172.30.18.187:8080",
+              "172.30.18.188:8080",
+              "172.30.18.189:8080"
+            ],
+            "url": "http://IP/position?start=0&rows=0&client=sou&ip=172.30.17.10&S_SOU_WORK_CITY=530",
+            "field": "numFound"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "RD",
+      "services": [
+        {
+          "serviceName": "solr-slave",
+          "domainName": "rd-solr-slave",
+          "serviceInfo": {
+            "ips": [
+              "172.30.1.28:8080",
+              "172.30.1.30:8080",
+              "172.30.1.31:8080",
+              "172.30.1.33:8080",
+              "172.30.1.34:8080",
+              "172.30.1.35:8080",
+              "172.30.1.36:8080",
+              "172.30.1.37:8080",
+              "172.30.195.50:8080",
+              "172.30.195.51:8080"
+            ],
+            "url": "http://IP/solr/select/?q=*%3A*&start=0&rows=1&indent=on&wt=json",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-master",
+          "domainName": "rd-solr-master",
+          "serviceInfo": {
+            "ips": [
+              "172.30.2.245:8080",
+              "172.30.2.246:8080",
+              "172.30.2.247:8080",
+              "172.30.2.248:8080",
+              "172.30.195.40:8080"
+            ],
+            "url": "http://IP/solr/select/?q=*%3A*&start=0&rows=1&indent=on&wt=json",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-top-master",
+          "domainName": "solr-top-master",
+          "serviceInfo": {
+            "ips": [
+              "172.30.2.191:8080"
+            ],
+            "url": "http://IP/solr/select/?q=*%3A*&start=0&rows=1&indent=on&wt=json",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-top-slave",
+          "domainName": "solr-top-slave",
+          "serviceInfo": {
+            "ips": [
+              "172.30.5.33:8080",
+              "172.30.1.202:8080"
+            ],
+            "url": "http://IP/solr/select/?q=*%3A*&start=0&rows=1&indent=on&wt=json",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-recommend",
+          "domainName": "solr-recommend",
+          "serviceInfo": {
+            "ips": [
+              "172.30.16.200:8080",
+              "172.30.16.201:8080",
+              "172.30.16.202:8080",
+              "172.30.16.203:8080",
+              "172.30.16.204:8080",
+              "172.30.16.205:8080",
+              "172.30.16.206:8080",
+              "172.30.16.207:8080"
+            ],
+            "url": "http://IP/solr/select/?q=*%3A*&start=0&rows=1&indent=on&wt=json",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "api",
+          "domainName": "rdsearchapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.10.111:8080",
+              "172.30.10.112:8080",
+              "172.30.10.113:8080",
+              "172.30.10.114:8080",
+              "172.30.10.115:8080",
+              "172.30.10.116:8080"
+            ],
+            "url": "http://IP/resume?ip=172.30.17.10&client=sou&rows=1&S_CURRENT_CITY=530",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "resume-recommend-api",
+          "domainName": "rdsearchapi.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.15.201:8080",
+              "172.30.15.202:8080",
+              "172.30.15.203:8080",
+              "172.30.15.204:8080"
+            ],
+            "url": "http://IP/recommend?start=0&rows=30&S_KEYWORD_RECOMM=%E9%94%80%E5%94%AE&S_JOB_TYPE=097&S_DATE_LASTUPDATE=150414,150514&S_CURRENT_CITY=551&R_INDUSTRY=300500&R_WORKYEAR=0&sort=recommscore&CompanyId=12007036&DepartmentId=12007036&UserId=345",
+            "field": "code"
+          }
+        },
+        {
+          "serviceName": "campus-job-recommend",
+          "domainName": "campus-job-recommend-api-16-180.zhaopin.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.16.181:8080",
+              "172.30.16.182:8080"
+            ],
+            "url": "http://IP/position/similar?id=CC000109698J90000538000&recommendTotal=3",
+            "field": "code"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "apply",
+      "services": [
+        {
+          "serviceName": "solr1",
+          "domainName": "apply-solr",
+          "serviceInfo": {
+            "ips": [
+              "172.30.41.10:9080",
+              "172.30.41.11:9080",
+              "172.30.41.12:9080",
+              "172.30.41.13:9080",
+              "172.30.41.14:9080",
+              "172.30.41.15:9080",
+              "172.30.41.16:9080",
+              "172.30.41.17:9080",
+              "172.30.41.18:9080",
+              "172.30.41.19:9080"
+            ],
+            "url": "http://IP/solr/rdapply1/select?q=*%3A*&rows=1&wt=json&indent=true",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr2",
+          "domainName": "apply-solr",
+          "serviceInfo": {
+            "ips": [
+              "172.30.41.20:9080",
+              "172.30.41.21:9080",
+              "172.30.41.22:9080",
+              "172.30.41.23:9080",
+              "172.30.41.24:9080",
+              "172.30.41.25:9080",
+              "172.30.41.26:9080",
+              "172.30.41.27:9080",
+              "172.30.41.28:9080",
+              "172.30.41.29:9080"
+            ],
+            "url": "http://IP/solr/rdapply1/select?q=*%3A*&rows=1&wt=json&indent=true",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "ES-CZ",
+          "domainName": "ES-CZ",
+          "serviceInfo": {
+            "ips": [
+              "172.30.195.10:9200"
+            ],
+            "url": "http://IP/apply_cz/_search",
+            "field": "es"
+          }
+        },
+        {
+          "serviceName": "solr-backup1",
+          "domainName": "apply-solr-backup",
+          "serviceInfo": {
+            "ips": [
+              "172.30.13.190:9080",
+              "172.30.13.191:9080",
+              "172.30.13.192:9080",
+              "172.30.13.193:9080",
+              "172.30.13.194:9080",
+              "172.30.13.195:9080",
+              "172.30.13.196:9080",
+              "172.30.13.197:9080",
+              "172.30.13.198:9080",
+              "172.30.13.199:9080"
+            ],
+            "url": "http://IP/solr/rdapply1/select?q=*%3A*&rows=1&wt=json&indent=true",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr-backup2",
+          "domainName": "apply-solr-backup",
+          "serviceInfo": {
+            "ips": [
+              "172.30.13.200:9080",
+              "172.30.13.201:9080",
+              "172.30.13.202:9080",
+              "172.30.13.203:9080",
+              "172.30.13.204:9080",
+              "172.30.13.205:9080",
+              "172.30.13.206:9080",
+              "172.30.13.207:9080",
+              "172.30.13.208:9080",
+              "172.30.13.209:9080"
+            ],
+            "url": "http://IP/solr/rdapply1/select?q=*%3A*&rows=1&wt=json&indent=true",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "api",
+          "domainName": "applyapi.zpidc.com-rd",
+          "serviceInfo": {
+            "ips": [
+              "172.30.10.131:8080",
+              "172.30.10.132:8080",
+              "172.30.10.133:8080",
+              "172.30.10.134:8080",
+              "172.30.10.135:8080",
+              "172.30.10.136:8080",
+              "172.30.10.137:8080"
+            ],
+            "url": "http://IP/rdapply?S_CompanyId=12007036&rows=1",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "api2",
+          "domainName": "apply.search.zpidc.com-cz",
+          "serviceInfo": {
+            "ips": [
+              "172.30.18.30:8080",
+              "172.30.18.31:8080",
+              "172.30.18.32:8080"
+            ],
+            "url": "http://IP/apply?S_CompanyId=CZ74923694&rows=0&sort=time&ip=127.0.0.1&client=sou",
+            "field": "numFound"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "recommend",
+      "services": [
+        {
+          "serviceName": "jobrecommend",
+          "domainName": "similarJob.jsp",
+          "serviceInfo": {
+            "ips": [
+              "172.30.2.191"
+            ],
+            "url": "http://IP/SimilarJob.jsp?jobNo=NUMBERID&num=30&userId=143800361&opt=y",
+            "field": "search_job"
+          }
+        },
+        {
+          "serviceName": "recommendapi",
+          "domainName": "recommendapi.zhaopin.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.15.220:8080",
+              "172.30.15.221:8080",
+              "172.30.15.222:8080",
+              "172.30.15.223:8080",
+              "172.30.15.224:8080"
+            ],
+            "url": "http://IP/behavior?jobNo=NUMBERID",
+            "field": "search_job"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "message",
+      "services": [
+        {
+          "serviceName": "Kafka",
+          "domainName": "Kafka.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.1.246:8080",
+              "172.30.1.247:8080",
+              "172.30.1.248:8080"
+            ],
+            "url": "http://IP/",
+            "field": "code"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "adepter",
+      "services": [
+        {
+          "serviceName": "inputindex",
+          "domainName": "inputindex.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.4.7:8088",
+              "172.30.4.8:8088",
+              "172.30.4.9:8088"
+            ],
+            "url": "http://IP/PositionHandler.ashx?position=CC699695424J90250102000",
+            "field": "code"
+          }
+        },
+        {
+          "serviceName": "resumeadapter",
+          "domainName": "resumeadapter.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.19.11:8088",
+              "172.30.19.12:8088",
+              "172.30.19.13:8088"
+            ],
+            "url": "http://IP/AdapterHandler.ashx?id=JS129494064R90250000000",
+            "field": "code"
+          }
+        },
+        {
+          "serviceName": "applyadapter",
+          "domainName": "apply-adapter.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.10.120:8088",
+              "172.30.10.121:8088",
+              "172.30.10.122:8088",
+              "172.30.10.123:8088",
+              "172.30.10.125:8088",
+              "172.30.10.126:8088",
+              "172.30.10.127:8088"
+            ],
+            "url": "http://IP/Adapter.ashx?info=[applyinfo]",
+            "field": "apply"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "scloud",
+      "services": [
+        {
+          "serviceName": "company",
+          "domainName": "scloud.zhaopin.com/company",
+          "serviceInfo": {
+            "ips": [
+              "172.30.15.180:8080",
+              "172.30.15.183:8080",
+              "172.30.15.184:8080",
+              "172.30.15.185:8080"
+            ],
+            "url": "http://IP/company?keyword=%E6%99%BA%E8%81%94%E6%8B%9B%E8%81%98&rows=10",
+            "field": "code"
+          }
+        },
+        {
+          "serviceName": "es-company",
+          "domainName": "es-scloud.zhaopin.com/_plugin/head",
+          "serviceInfo": {
+            "ips": [
+              "172.30.15.181:9200",
+              "172.30.15.182:9200"
+            ],
+            "url": "http://IP/",
+            "field": "code"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "word",
+      "services": [
+        {
+          "serviceName": "solr1",
+          "domainName": "old-rclx-solr",
+          "serviceInfo": {
+            "ips": [
+              "172.30.2.62:8983",
+              "172.30.2.61:8081",
+              "172.30.2.61:8082"
+            ],
+            "url": "http://IP/solr/hotword/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "solr2",
+          "domainName": "smart-word-solr",
+          "serviceInfo": {
+            "ips": [
+              "172.30.40.90:8080",
+              "172.30.40.91:8080"
+            ],
+            "url": "http://IP/solr/hotword_position/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "api",
+          "domainName": "smart.zhaopin.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.18.190:8080",
+              "172.30.18.191:8080",
+              "172.30.18.192:8080",
+              "172.30.18.193:8080",
+              "172.30.18.194:8080",
+              "172.30.18.195:8080"
+            ],
+            "url": "http://IP/hotword?ip=127.0.0.1&client=sou&S_HOT_TYPE=4&rows=1",
+            "field": "numFound"
+          }
+        }
+      ]
+    },
+    {
+      "projectName": "present",
+      "services": [
+        {
+          "serviceName": "solr-present",
+          "domainName": "position-present",
+          "serviceInfo": {
+            "ips": [
+              "172.30.41.45:8080",
+              "172.30.41.40:8080"
+            ],
+            "url": "http://IP/solr/talent/select?q=*%3A*&wt=json&indent=true&rows=1",
+            "field": "response.numFound"
+          }
+        },
+        {
+          "serviceName": "present",
+          "domainName": "present.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.20.61:8080",
+              "172.30.20.62:8080",
+              "172.30.20.63:8080",
+              "172.30.20.64:8080"
+            ],
+            "url": "http://IP/talent?ip=172.30.17.10&client=sou&S_JobNumber=CZ747584240J00018644601&S_CompanyId=CZ74758424&S_Display=0,1&S_Status=0,3&rows=0",
+            "field": "numFound"
+          }
+        },
+        {
+          "serviceName": "toprank",
+          "domainName": "toprank.zpidc.com",
+          "serviceInfo": {
+            "ips": [
+              "172.30.5.34:8080",
+              "172.30.41.43:8080"
+            ],
+            "url": "http://IP",
+            "field": "code"
+          }
+        }
+      ]
+    }
+  ],
+  "version": 0.155,
+  "path": "/configs/sadmin/com.zhaopin.monitor.core.conf.MonitorMessage"
+}

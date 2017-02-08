@@ -1,0 +1,77 @@
+{
+    "menus": [{
+        "key": 1,
+        "name": "Dashboard",
+        "icon": "user",
+        "child": [{
+
+            "name": "远程配置",
+            "key": 100,
+            "url": "/remoteconfig"
+        }, {
+            "name": "到面职位管理",
+            "key": 101,
+            "url": "/dm"
+        }, {
+            "name": "企业管理",
+            "key": 102,
+            "url": "/company"
+        }, {
+
+            "name": "服务器管理",
+            "key": 103,
+            "url": "/company/core"
+        }, {
+
+            "name": "公司路由管理",
+            "key": 104,
+            "url": "/company/route"
+        }]
+
+    }, {
+        "key": 2,
+        "name": "系统监控",
+        "icon": "laptop",
+        "child": [{
+            "name": "服务器监控",
+            "key": "201",
+            "url": "/monitor"
+        }, {
+
+            "name": "redis管理",
+            "key": 202,
+            "url": "/monitor/redis"
+        }]
+
+    }, {
+        "key": 3,
+        "name": "消息维护",
+        "icon": "notification",
+        "child": [{
+            "name": "橄榄枝消息日志",
+            "key": 301,
+            "url": "/message/glz"
+        }, {
+
+            "name": "发送消息",
+            "key": 302,
+            "url": "/message/send"
+        }, {
+
+            "name": "重置排队消息",
+            "key": 303,
+            "url": "/message/resetline"
+        }]
+
+    }, {
+        "key": 4,
+        "name": "搜索引擎",
+        "icon": "search",
+        "child": [{
+            "name": "词库维护",
+            "key": "401",
+            "url": "/se/lexicon"
+        }]
+
+    }]
+}
