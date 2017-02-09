@@ -1,4 +1,9 @@
 # react-redux-demo
+
+>npm install
+
+>npm start
+
 ###### 效果图：
 ![1](http://assets.5isolar.com/img/react/1.png)
 ![2](http://assets.5isolar.com/img/react/2.png)
